@@ -1,9 +1,12 @@
 {
   "name": "bun-test",
-  "module": "main.ts",
+  "module": "src/main.ts",
   "type": "module",
   "devDependencies": {
     "bun-types": "latest"
+  },
+  "scripts": {
+    "start": "bun run src/main.ts"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
