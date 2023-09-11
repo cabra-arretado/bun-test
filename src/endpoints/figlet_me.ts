@@ -14,3 +14,5 @@ class FigletMe extends Endpoint {
     return new Response(figlet.textSync(body));
   }
 }
+
+export default new FigletMe();
