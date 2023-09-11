@@ -19,7 +19,6 @@ async function figlet_me(request: Request) {
   }
   if (request.method == "POST") {
     let body = await request.text();
-    body = JSON.parse(body);
     console.log(body);
     return new Response(figlet.textSync(body));
   }
