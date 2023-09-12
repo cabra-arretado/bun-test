@@ -1,3 +1,4 @@
+import { logger } from "./utils";
 import { IDict, Endpoint } from "./types";
 import FigletMe from "./endpoints";
 
@@ -7,7 +8,8 @@ export default function router(request: Request) {
   let path = get_path(request);
   try {
     return ENDPOINTS[path].run(request);
-  } catch (e) {
+  } catch (e: any) {
+    logger(request, e);
     return new Response("Not found", { status: 404 });
   }
 }
