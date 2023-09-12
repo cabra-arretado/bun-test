@@ -1,8 +1,7 @@
-import { IDict } from "types";
-import Endpoint from "endpoints/class";
-import figlet_me from "endpoints/figlet_me";
+import { IDict, Endpoint } from "types";
+import FigletMe from "endpoints";
 
-const ENDPOINTS: IDict<Endpoint> = {"figlet_me": figlet_me};
+const ENDPOINTS: IDict<Endpoint> = {"figlet_me": new FigletMe()};
 
 export default function router(request: Request) {
   let path = get_path(request);

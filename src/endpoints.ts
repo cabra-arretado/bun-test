@@ -1,7 +1,7 @@
 import figlet from "figlet";
-import Endpoint from "endpoints/class";
+import { Endpoint } from "types";
 
-class FigletMe extends Endpoint {
+export default class FigletMe extends Endpoint {
   constructor() {
     super("/figlet_me", ["GET", "POST"]);
   }
@@ -14,5 +14,3 @@ class FigletMe extends Endpoint {
     return new Response(figlet.textSync(body));
   }
 }
-
-export default new FigletMe();
