@@ -1,5 +1,5 @@
-import { IDict, Endpoint } from "types";
-import FigletMe from "endpoints";
+import { IDict, Endpoint } from "./types";
+import FigletMe from "./endpoints";
 
 const ENDPOINTS: IDict<Endpoint> = {"figlet_me": new FigletMe()};
 

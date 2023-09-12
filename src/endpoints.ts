@@ -1,5 +1,5 @@
 import figlet from "figlet";
-import { Endpoint } from "types";
+import { Endpoint } from "./types";
 
 export default class FigletMe extends Endpoint {
   constructor() {

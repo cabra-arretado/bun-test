@@ -15,7 +15,7 @@ export class Endpoint {
   }
 
   constructor(path: string, supported_methods: string[]) {
-    if (!path_validator(path)) {
+    if (path_validator(path)) {
     this.path = path;
     } else {
       throw new Error("Invalid path");
