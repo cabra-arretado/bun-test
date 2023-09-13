@@ -1,8 +1,11 @@
 import { logger } from "../src/utils";
-import { expect, test, describe, mock } from "bun:test";
+import { expect, test, describe, mock, spyOn } from "bun:test";
 
 describe("Utils:", () => {
+  //TODO: fix this test
   test("logger", () => {
-    expect(2 + 2).toBe(4);
+    let spy = spyOn(console, "log");
+    logger(new Request("www.test.test"), new Error("test")) 
+    expect(spy).toHaveBeenCalledTimes(2);
   });
 })

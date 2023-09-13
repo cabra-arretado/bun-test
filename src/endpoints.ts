@@ -9,6 +9,7 @@ export default class FigletMe extends Endpoint {
     return new Response(figlet.textSync("Hello World!"));
   }
   async post(request: Request) {
+    //TODO: Add body processing
     let body = await request.text();
     console.log(body);
     return new Response(figlet.textSync(body));
