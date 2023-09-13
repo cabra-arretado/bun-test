@@ -6,7 +6,6 @@ const ENDPOINTS: IDict<Endpoint> = {"/figlet_me": new FigletMe()};
 
 export default function router(request: Request) {
   let path = get_path(request);
-  console.log(path);
   try {
     return ENDPOINTS[path].run(request);
   } catch (e: any) {
